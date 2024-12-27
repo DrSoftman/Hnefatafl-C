@@ -65,7 +65,7 @@
 
  # The game rules
 
-    Objective
+    **Objective**
     The dark pieces (attackers) lay siege, their goal, to capture the king. The light pieces (defenders) 
     must break the siege and get their king to safety.
 
@@ -87,11 +87,10 @@
     5. Restricted squares
     Restricted squares may only be occupied by the king. The central restricted square is called the throne. 
     It is allowed for the king to re-enter the throne, and all pieces may pass through the throne when it is 
-    empty.
-
-    Restricted squares are hostile, which means they can replace one of the two pieces taking part in a capture. 
-    The throne is always hostile to the attackers, but only hostile to the defenders when it is empty. The four 
-    corner squares are also restricted and hostile, just like the throne. The board edge is NOT hostile.
+    empty. Restricted squares are hostile, which means they can replace one of the two pieces taking part in 
+    a capture. The throne is always hostile to the attackers, but only hostile to the defenders when it is
+    empty. The four corner squares are also restricted and hostile, just like the throne. The board edge is 
+    NOT hostile.
 
     6. King's side win
     If the king reaches any corner square, the king has escaped and his side wins.
