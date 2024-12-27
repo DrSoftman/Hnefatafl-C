@@ -12,6 +12,9 @@
     against your friend". You will be able to click on them with
     your mousecursor.
 
+ *. It must have a database that will store your account along with
+    your stats. 
+
  *. In the window there will a 11x11 game board that occupies the entire screen
     of the window.
 
