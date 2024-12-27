@@ -1,3 +1,113 @@
 
 **This file is intended for planning**
 
+# Goals I have for this project
+
+ *. There will be a program window that shows up upon starting the 
+    game.
+
+ *. When you first open the game there will be a starting menu with
+    two buttons side by side, the first one to the left will say 
+    "play against a bot" and the one to the right will say "play 
+    against your friend". You will be able to click on them with
+    your mousecursor.
+
+ *. In the window there will a 11x11 game board that occupies the entire screen
+    of the window.
+
+ *. The game must have a GUI for the game board and a HUD that displays how many 
+    pieces that have been captured and whose turn it is and also how many moves
+    that have been made so far in total during the entire game session.
+
+ *. You will be able to move an individual piece with your mousecursor by first
+    clicking on the piece you want to move and then click on the box where you 
+    want that piece to move to. If you left click on a box where the piece cannot 
+    move to then the move will be resetted and make so that you have to try again by
+    clicking on that piece you wanted to move (or a different one) until you moved it 
+    validly. If you choose to right click when after left clicking a piece then the
+    choosing is resetted so that you can think again before you move. You won't be
+    able to hold left click and make the piece hover with the cursor to where you 
+    want it to be placed, you can only single click on the piece and then move the 
+    cursor to the destination and then single click it there to move the piece.
+
+ *. You will be able to play against your friend or against a bot. 
+
+
+ # Data structures and other things that I will use
+
+  1. A 11x11 2D array called "board" that will handle the game 
+    logic like all of the seperate coordinates of the different
+    pieces.
+
+  2. 4 different #define macros for the different types of pieces
+     that can occupy any box on the board. "EMPTY" is defined as
+     the number 0 and is not a piece but the logical value of a 
+     box that is empty and has no piece on it yet, "ATTACKER" is 
+     defined as the number 1 and is the piece for the black pieces 
+     on the sides that attack the white pieces in the middle, 
+     "DEFENDER" is defined as the number 2 and is the piece for the 
+     white pieces that cover and defend the king in the middle and
+     lastly the "KING" is defined as the number 4 and is the piece
+     that is the white king that the other white defenders defend
+     from the black pieces who are attacking them. 
+     
+       * Each starting coordinate of the pieces: 
+
+         * Black attacker pieces: 
+
+         * White defender pieces:
+
+         * The white king:  
+
+
+ # The game rules
+
+    Objective
+    The dark pieces (attackers) lay siege, their goal, to capture the king. The light pieces (defenders) 
+    must break the siege and get their king to safety.
+
+    1. Two players, the king's side vs attackers. There are twice as many attackers as defenders.
+
+    2. The attackers' side moves first, the players then take turns.
+
+    3. All pieces move any number of vacant squares along a row or a column, like a rook in chess.
+
+    4. Capture 
+    All pieces except the king are captured if sandwiched between two enemy pieces, 
+    or between an enemy piece and a restricted square. The two enemy pieces should 
+    be on the square above and below or on the squares left and right of the attacked 
+    piece, i.e. not diagonally.
+
+    A piece is only captured if the trap is closed by the aggressor's move, it is 
+    therefore permitted to move in between two enemy pieces. The king may take part in captures.
+
+    5. Restricted squares
+    Restricted squares may only be occupied by the king. The central restricted square is called the throne. 
+    It is allowed for the king to re-enter the throne, and all pieces may pass through the throne when it is 
+    empty.
+
+    Restricted squares are hostile, which means they can replace one of the two pieces taking part in a capture. 
+    The throne is always hostile to the attackers, but only hostile to the defenders when it is empty. The four 
+    corner squares are also restricted and hostile, just like the throne. The board edge is NOT hostile.
+
+    6. King's side win
+    If the king reaches any corner square, the king has escaped and his side wins.
+
+    7a. Attackers win
+    The attackers win if they can capture the king.
+
+    The king is captured when the attackers surround him on all four cardinal points, 
+    except when he is next to the throne.
+
+    If on a square next to the throne, the attackers must occupy the three remaining squares around him.
+
+    The king cannot be captured on the board edge, UNLESS he is the only white piece remaining on the 
+    board and is completely surrounded by black (i.e. rule 8).
+
+    7b. If the attackers surround the king and ALL remaining defenders, then they win, as they have 
+    prevented the king from escaping.
+
+    8. If a player cannot move, he loses the game.
+
+    9. If it is not possible to end the game, fx. because both sides have too few pieces left or because 
+    of repetitions, it is a draw.
