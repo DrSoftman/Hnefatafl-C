@@ -431,7 +431,7 @@ public:
     }
 
 
-    void addTag(const string& tag) {
+    void addElement(const string& tag) {
         
         if (tag.empty() || std::all_of(tag.begin(), tag.end(), ::isspace)) {
             cerr << "Error: Tag cannot be empty\n"; //If empty of whitespace.
