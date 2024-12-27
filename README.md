@@ -1,1 +1,1 @@
-# Hnefatafl-C
+# Hnefatafl-CPP
