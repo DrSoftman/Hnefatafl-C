@@ -50,7 +50,7 @@
      on the sides that attack the white pieces in the middle, 
      "DEFENDER" is defined as the number 2 and is the piece for the 
      white pieces that cover and defend the king in the middle and
-     lastly the "KING" is defined as the number 4 and is the piece
+     lastly the "KING" is defined as the number 3 and is the piece
      that is the white king that the other white defenders defend
      from the black pieces who are attacking them. 
      
