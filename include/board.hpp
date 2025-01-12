@@ -3,9 +3,9 @@
 #define BOARD_HPP
 
 #define EMPTY 0
-#define KING 4
 #define ATTACKER 1
 #define DEFENDER 2
+#define KING 3
 
 #include <iostream>
 
