@@ -22,8 +22,44 @@ class Board {
           grid[i][j] = EMPTY;
         }
       }
-      // TODO: Set coordinates of pieces
+      // King
+      grid[5][5] = KING;
 
+      // White defenders
+      grid[5][3] = DEFENDER;
+      grid[4][4] = DEFENDER;
+      grid[6][4] = DEFENDER;
+      grid[3][5] = DEFENDER; 
+      grid[7][5] = DEFENDER; 
+      grid[4][6] = DEFENDER;
+      grid[6][6] = DEFENDER; 
+      grid[5][7] = DEFENDER;
+      grid[5][0] = DEFENDER;
+      grid[5][10] = DEFENDER;
+      grid[0][5] = DEFENDER;
+      grid[10][5] = DEFENDER;
+
+      // Black attackers
+      grid[3][0] = ATTACKER; 
+      grid[4][0] = ATTACKER;
+      grid[5][0] = ATTACKER;
+      grid[6][0] = ATTACKER;
+      grid[7][0] = ATTACKER;
+      grid[3][10] = ATTACKER; 
+      grid[4][10] = ATTACKER;
+      grid[5][10] = ATTACKER;
+      grid[6][10] = ATTACKER;
+      grid[7][10] = ATTACKER;
+      grid[0][3] = ATTACKER;
+      grid[0][4] = ATTACKER;
+      grid[0][5] = ATTACKER;
+      grid[0][6] = ATTACKER;
+      grid[0][7] = ATTACKER;
+      grid[10][3] = ATTACKER;   
+      grid[10][4] = ATTACKER;
+      grid[10][5] = ATTACKER;
+      grid[10][6] = ATTACKER;
+      grid[10][7] = ATTACKER;
     }
 
 };
