@@ -1,0 +1,7 @@
+
+This is the directory that manages the external tools and libraries, which in this case 
+would be RoofNut.
+
+RoofNut is a simple GUI library that my friend Wickslynx made and I want to clarify with this 
+CREDIT file that I do not own the license to his works and that all credit goes to his project
+https://github.com/Wickslynx/RoofNut.
