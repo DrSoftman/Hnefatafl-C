@@ -4,6 +4,5 @@
 
 #include <roofnut.h>
 
-void 
 
 #endif // WINDOW_H
