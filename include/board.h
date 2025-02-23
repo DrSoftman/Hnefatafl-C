@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 
-void initBoard(char board[11][11]) {
+void initBoard(int board[11][11]) {
     // Init all offsets in board to 0
     for (int i = 0; i <= 11; i++) {
         for (int j = 0; j <= 11; j++) {
@@ -52,6 +52,10 @@ void initBoard(char board[11][11]) {
     board[10][5] = DEFENDER;
 
     board[5][5] = KING;
+}
+
+void is_piece_surrounded(int board[11][11]) {
+    
 }
 
 #endif // BOARD_H
