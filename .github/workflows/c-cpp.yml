@@ -1,0 +1,33 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Install required dependencies
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential cmake
+        sudo apt-get install libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libglfw3-dev libxkbcommon-dev libxi-dev libvulkan-dev libglew-dev libglu1-mesa-dev
+
+    - name: Install library.
+      run: ./install.sh
+
+    - name: Run RoofNut tests.
+      run: |
+        g++ include/external/RoofNut/install/tests/main-test.c -o main -lRoofNut  -lGLEW -lGL -lglfw -lvulkan
+        ./main
+
+
+
+      
