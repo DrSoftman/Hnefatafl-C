@@ -36,6 +36,27 @@ void getPlayerMove(GameState *state, int *fromRow, int *fromCol, int *toRow, int
 
 int main() {
     SApplication app;
+
+    if (!SDisplayOpen(&app)) {
+        return 1;
+    }
+
+    if (!SWindowCreate(&app, "My Window", 100, 100, 400, 300)) {
+        SDisplayClose(&app);
+        return 1;
+    }
+
+    while (SEventProcess(&app)) {
+        // Begin frame
+        SBeginFrame(&app);
+        
+
+        // End frame
+        SSwapBuffers(&app);
+    }
+
+
+
     
 }
 
