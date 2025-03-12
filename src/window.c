@@ -1,3 +1,3 @@
-//RoofNut impl goes here.
+// stdui impl goes here
 
 #include "window.h"
