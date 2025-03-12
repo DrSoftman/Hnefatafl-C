@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
+#include "gui.h"
 
 // Define game constants
 #define BOARD_SIZE 11
@@ -34,44 +35,8 @@ char* pieceToSymbol(char piece);
 void getPlayerMove(GameState *state, int *fromRow, int *fromCol, int *toRow, int *toCol);
 
 int main() {
-    GameState gameState;
-    initializeGame(&gameState);
-
-    int fromRow, fromCol, toRow, toCol;
-    bool validMove;
-
-    clearScreen();
-    printf("Welcome to Hnefatafl (Viking Chess)!\n");
-    printHelp();
-
-    while (!gameState.gameOver) {
-        printBoard(&gameState);
-
-        printf("\n%s's turn to move\n", gameState.attackerTurn ? "Attacker (A)" : "Defender (D/K)");
-
-        getPlayerMove(&gameState, &fromRow, &fromCol, &toRow, &toCol);
-
-        validMove = makeMove(&gameState, fromRow, fromCol, toRow, toCol);
-        if (!validMove) {
-            printf("Invalid move! Try again.\n");
-            continue;
-        }
-
-        clearScreen();
-
-        if (isGameOver(&gameState)) {
-            gameState.gameOver = true;
-            break;
-        }
-
-        gameState.attackerTurn = !gameState.attackerTurn;
-    }
-
-    printBoard(&gameState);
-    printf("\nGame over! %s wins!\n",
-           gameState.winner == ATTACKER ? "Attacker (A)" : "Defender (D/K)");
-
-    return 0;
+    SApplication app;
+    
 }
 
 void initializeGame(GameState *state) {
