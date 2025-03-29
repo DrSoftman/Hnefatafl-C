@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
-#include "gui.h"
 
 // Define game constants
 #define BOARD_SIZE 11
@@ -35,29 +34,8 @@ char* pieceToSymbol(char piece);
 void getPlayerMove(GameState *state, int *fromRow, int *fromCol, int *toRow, int *toCol);
 
 int main() {
-    SApplication app;
 
-    if (!SDisplayOpen(&app)) {
-        return 1;
-    }
-
-    if (!SWindowCreate(&app, "My Window", 100, 100, 400, 300)) {
-        SDisplayClose(&app);
-        return 1;
-    }
-
-    while (SEventProcess(&app)) {
-        // Begin frame
-        SBeginFrame(&app);
-        
-
-        // End frame
-        SSwapBuffers(&app);
-    }
-
-
-
-    
+    return 0;
 }
 
 void initializeGame(GameState *state) {
